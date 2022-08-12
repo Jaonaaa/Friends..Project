@@ -1,2 +1,2 @@
 # Friends..Project
-Mpinaman be zahay :3
+Mpinamana be zahay :3
