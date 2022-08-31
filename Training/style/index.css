@@ -1,0 +1,22 @@
+body {  /* SM down */
+    margin : 0;
+    background-color: rgb(240, 242, 245);
+  }
+  
+  @media screen and (min-width: 400px) { /*SM up or MD down*/
+    body {
+     
+    }
+  }
+  
+  @media screen and (min-width: 900px) { /*MD up or LG down*/
+    body {
+      
+    }
+  }
+
+  @media screen and (min-width: 1200px) { /*LG up */
+    body {
+     
+    }
+  }
