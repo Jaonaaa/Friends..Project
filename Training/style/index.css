@@ -20,3 +20,154 @@ body {  /* SM down */
      
     }
   }
+
+  .sideNavLeft {
+    background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+    margin:1em 0 0 1em;
+    width: 14rem;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: scroll;
+    padding: 1em 1.2rem 1.7rem 1.2rem;
+    color:rgb(210, 199, 199);
+  }
+
+  .box
+  {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.2rem;
+    justify-content: center;
+    padding: 0.9rem 0.4rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+  }
+/*-----------Title---------*/
+  .title1{
+    
+    font-size: 1.5rem;
+    text-align: center;
+    font-family:"Foco";
+   
+  }
+
+
+  .title2 {
+    text-align: center;
+    font-family:"Foco";
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    margin-left: 0.7rem;
+    letter-spacing: 0.1rem;
+  }
+/*---------------------------*/
+
+  .row{
+   
+    width: 100%;
+    display: flex;
+   
+
+  }
+  .caret {
+    vertical-align: bottom;
+   
+    height: fit-content;
+    align-self: center;
+     
+     margin: 0.4rem 0.3rem 0 auto;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(0deg);
+    letter-spacing: 0;
+  }
+
+  hr {
+    width: 100%;
+    margin: 0.478rem 0 0.46rem 0;
+    border-color: gray;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    margin-left: 1.3rem;
+  }
+  .letterIcon{
+    width: 27.2px;
+   
+    text-align: center;
+    border-radius:50%;
+    overflow: hidden;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    
+  }
+
+
+  /*-------------AVATAR----------*/
+  .avatar 
+  {
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatarPic
+  {
+    overflow: hidden;
+    width:2.6rem;
+    float: left;
+    height:2.6rem ;
+    border-radius: 50%;
+  }
+  .avatarPic img 
+  {
+    height:2.6rem !important;
+    width:2.6rem !important;
+  }
+
+  .avatarName {
+    margin-left: 0.4rem;
+    float:left;
+    align-self:center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  /*--------------------------------*/
+  /*---------Section---------------*/
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.4rem 0.4rem;
+    margin-bottom: 0.2rem;
+    /* border-radius: 0.35rem; */
+   
+  }
+  /*------------OPTION------------*/
+  .selected{
+
+    background-color:rgb(110, 110, 110);
+  }
+  .selectedItem{
+
+    background-color:rgb(102, 68, 4);
+  }
+  /*--------PARTIES--------*/
+  .parties{
+    overflow: hidden;
+    height: 3.6rem;
+   
+    transition: all 0.3s ease-in-out;
+  }
