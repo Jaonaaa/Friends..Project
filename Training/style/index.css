@@ -29,6 +29,7 @@ body {  /* SM down */
     display: flex;
     flex-direction: column;
     border-radius: 1em;
+    transition: all 0.3s ease-in-out;
     overflow: scroll;
     padding: 1em 1.2rem 1.7rem 1.2rem;
     color:rgb(210, 199, 199);
@@ -49,6 +50,7 @@ body {  /* SM down */
     
     font-size: 1.5rem;
     text-align: center;
+    cursor:auto !important;
     font-family:"Foco";
    
   }
@@ -171,3 +173,40 @@ body {  /* SM down */
    
     transition: all 0.3s ease-in-out;
   }
+  .closerLeftNavbar
+  {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+  }
+  .closerLeftNavbar img
+  {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0.01rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 50%;
+    background-image: radial-gradient(rgb(84, 84, 84),transparent);
+    align-self:flex-end;
+  }
+
+  #openLeftNavbar {
+  
+    right: 2rem;
+    bottom: 5rem;
+    position: fixed;
+    border-radius:50%;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 2rem;
+    background-image:linear-gradient(60deg,rgb(188, 188, 188),rgb(117, 110, 110));
+    padding: 1rem;
+    color: rgb(22, 46, 67);
+    box-shadow: 0.5px 0.5px 5px grey , 0.5px 0.5px 2rem grey ;
+    
+  }
+  
