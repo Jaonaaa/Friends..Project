@@ -1,9 +1,14 @@
 const root = document.getElementById("root");
-const sideNavLeft = document.getElementById("sideNavLeft");
 
-// root.innerHTML =
-//   ' Ity le lien <a href="https://demos.creative-tim.com/material-dashboard-pro-react/?_ga=2.2i0703785.623248287.1661926030-1023394046.1661780042#/dashboards/analytics">Click me </a> ';
-// sideNavLeft.style.height = window.innerHeight + "px";
+// -----------------------------------
+// root.innerHTML += sideNavLeft => from SideNavLeft.js;
+// import { sideNavLeftJS } from "./SideNavLeft.js";
+// /// Need to use Live server to see it
+//----------------------------------------
+
+root.innerHTML += sideNavLeftContent;
+
+const sideNavLeft = document.getElementById("sideNavLeft");
 
 const parties = document.getElementsByClassName("parties");
 
@@ -18,6 +23,38 @@ for (var i = 0; i < parties.length; i++) {
         parties[i].firstElementChild.firstElementChild.getElementsByClassName(
           "caret"
         );
+      // Désactive  l'ouverture des autres liste déroulante
+      for (var e = 0; e < parties.length; e++) {
+        if (e == i) {
+        } else {
+          parties[e].firstElementChild.classList.remove("selected");
+          parties[e].firstElementChild.firstElementChild
+            .getElementsByClassName("caret")[0]
+            .setAttribute("style", "transform: rotate(0deg) ;");
+          parties[e].style.height = heightInitial + "px";
+          /// complex
+          /*(function (e) {
+            for (
+              var a = 0;
+              a < parties[e].getElementsByClassName("item").length;
+              a++
+            ) {
+              (function (a) {
+                parties[e]
+                  .getElementsByClassName("item")
+                  [a].addEventListener("click", () => {
+                    console.log(parties[e]);
+                    parties[e]
+                      .getElementsByClassName("item")
+                      [a].classList.remove("selectedItem");
+                  });
+              })(a);
+            }
+          })(e);*/
+          //---------------
+        }
+      } //---------------------------------------------
+
       if (parties[i].style.height == heightNeeded + "rem") {
         parties[i].firstElementChild.classList.remove("selected");
         caret[0].setAttribute("style", "transform: rotate(0deg) ;");
@@ -36,6 +73,9 @@ for (var i = 0; i < parties.length; i++) {
           if (items[o].classList.contains("selectedItem")) {
             items[o].classList.remove("selectedItem");
           } else {
+            for (var u = 0; u < items.length; u++) {
+              items[u].classList.remove("selectedItem");
+            }
             items[o].classList.add("selectedItem");
           }
         });
