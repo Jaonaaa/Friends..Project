@@ -32,25 +32,7 @@ for (var i = 0; i < parties.length; i++) {
             .getElementsByClassName("caret")[0]
             .setAttribute("style", "transform: rotate(0deg) ;");
           parties[e].style.height = heightInitial + "px";
-          /// complex
-          /*(function (e) {
-            for (
-              var a = 0;
-              a < parties[e].getElementsByClassName("item").length;
-              a++
-            ) {
-              (function (a) {
-                parties[e]
-                  .getElementsByClassName("item")
-                  [a].addEventListener("click", () => {
-                    console.log(parties[e]);
-                    parties[e]
-                      .getElementsByClassName("item")
-                      [a].classList.remove("selectedItem");
-                  });
-              })(a);
-            }
-          })(e);*/
+
           //---------------
         }
       } //---------------------------------------------
@@ -66,18 +48,45 @@ for (var i = 0; i < parties.length; i++) {
       }
     });
 
+    /// remove all selectedItem expect the last selected one
+    function removeSelected(indexItem, indexParti) {
+      for (var e = 0; e < parties.length; e++) {
+        for (
+          var a = 0;
+          a < parties[e].getElementsByClassName("item").length;
+          a++
+        ) {
+          (function (a) {
+            if (a == indexItem && e == indexParti) {
+            } else {
+              parties[e]
+                .getElementsByClassName("item")
+                [a].classList.remove("selectedItem");
+            }
+          })(a);
+        }
+      }
+    }
+
+    /////
     const items = parties[i].getElementsByClassName("item");
     for (var o = 0; o < items.length; o++) {
       (function (o) {
         items[o].addEventListener("click", () => {
           if (items[o].classList.contains("selectedItem")) {
-            items[o].classList.remove("selectedItem");
+            items[o].classList.add("button");
+            buttons = document.querySelectorAll(".button");
+            buttons.forEach((button) => {
+              rippleEffect(button);
+            });
           } else {
             for (var u = 0; u < items.length; u++) {
               items[u].classList.remove("selectedItem");
+              items[u].classList.remove("button");
             }
             items[o].classList.add("selectedItem");
           }
+          removeSelected(o, i);
         });
       })(o);
     }

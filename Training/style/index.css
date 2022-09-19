@@ -164,14 +164,14 @@ body {  /* SM down */
     background-color:rgb(110, 110, 110);
   }
   .selectedItem{
-
+    position: relative;
+    overflow: hidden;
     background-color:rgb(102, 68, 4);
   }
   /*--------PARTIES--------*/
   .parties{
     overflow: hidden;
     height: 3.6rem;
-   
     transition: all 0.3s ease-in-out;
   }
   .closerLeftNavbar
@@ -191,7 +191,7 @@ body {  /* SM down */
     cursor: pointer;
     padding: 0.3rem;
     border-radius: 50%;
-    background-image: radial-gradient(rgb(84, 84, 84),transparent);
+    background-image: radial-gradient(rgb(96, 96, 96),transparent);
     align-self:flex-end;
   }
 

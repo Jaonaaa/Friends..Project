@@ -46,6 +46,7 @@ const sideNavLeftContent = `
     </div>
 
     <hr />
+    
     <div class="parties">
       <div class="box selected">
         <div class="row">

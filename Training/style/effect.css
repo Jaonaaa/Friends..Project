@@ -1,0 +1,24 @@
+.button span {
+     position: absolute;
+     background-image:radial-gradient(transparent,white,black) ;
+     transform: translate(-50%,-50%);
+     pointer-events: none;
+     opacity: 0.1;
+     border-radius:50%;
+     animation-name: rippleEffect;
+     animation-duration: 1000ms;
+}
+@keyframes rippleEffect {
+
+    0%{
+        
+         opacity: 0.1;
+    }
+   
+
+    100%{
+        transform: translate(-50%,-50%) scale(20);
+        opacity: 0;
+    }
+    
+}
