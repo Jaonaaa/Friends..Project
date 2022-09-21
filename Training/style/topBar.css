@@ -1,0 +1,120 @@
+#topBar {
+  font-family: Foco;
+  padding: 0.2rem 0.5rem 0.6rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.8rem;
+  display: flex;
+  position: relative;
+  top: 1rem;
+  float: right;
+
+  align-self:start;
+  transition: all 0.2s ease-in-out;
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  /*SM up or MD down*/
+  
+}
+
+@media screen and (min-width: 900px) {
+  /*MD up or LG down*/
+  
+}
+
+@media screen and (max-width: 400px) {
+  
+  #pathPage {
+    display: none;
+  }
+}
+
+#pathPage {
+  font-size: 0.8rem;
+  width: 100%;
+  letter-spacing: 0.2rem;
+  color: rgb(106, 106, 106);
+}
+#namePage {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.boxy {
+  display: flex;
+  padding: 0.3rem;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconBox div i {
+  font-size: 1.2rem;
+  position: relative;
+  color: grey;
+
+  transition: all 200ms ease-in-out;
+}
+.iconBox div i:hover {
+  cursor: pointer;
+  color: rgb(4, 73, 102);
+  text-shadow: 0.01rem 0.01rem 2rem rgb(4, 73, 102);
+  transform: translateY(-0.1rem);
+}
+
+@media screen and (max-width: 400px) {
+  /*SM up or MD down*/
+  .iconBox {
+    display: none;
+  }
+}
+
+.column {
+  flex-direction: column;
+}
+
+.searchBar {
+  display: flex;
+  margin-left: 20vw;
+}
+
+input[type="text"] {
+  outline: none;
+  border-width: 1px;
+  border-radius: 5%;
+  padding: 1em 0.3em;
+  background: none;
+}
+
+.input {
+  position: relative;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input label {
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  font-size: 0.93rem;
+  color: grey;
+  pointer-events: none;
+  background-color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.input input:focus ~ label {
+  top: -0.5rem;
+  font-size: 0.83rem;
+  left: 0.4rem;
+  padding: 0 0.2rem;
+  color: rgb(105, 197, 240);
+}
+.input input:focus {
+  border-color: rgb(105, 197, 240);
+}

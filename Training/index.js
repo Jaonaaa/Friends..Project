@@ -7,6 +7,7 @@ const root = document.getElementById("root");
 //----------------------------------------
 
 root.innerHTML += sideNavLeftContent;
+root.innerHTML += TopBar;
 
 const sideNavLeft = document.getElementById("sideNavLeft");
 
@@ -30,7 +31,7 @@ for (var i = 0; i < parties.length; i++) {
           parties[e].firstElementChild.classList.remove("selected");
           parties[e].firstElementChild.firstElementChild
             .getElementsByClassName("caret")[0]
-            .setAttribute("style", "transform: rotate(0deg) ;");
+            .setAttribute("style", "transform: rotate(0deg) ; ");
           parties[e].style.height = heightInitial + "px";
 
           //---------------
@@ -43,7 +44,10 @@ for (var i = 0; i < parties.length; i++) {
         parties[i].style.height = heightInitial + "px";
       } else {
         parties[i].firstElementChild.classList.add("selected");
-        caret[0].setAttribute("style", "transform: rotate(180deg) ;");
+        caret[0].setAttribute(
+          "style",
+          "transform: rotate(180deg) ; color: white;"
+        );
         parties[i].style.height = heightNeeded + "rem";
       }
     });
@@ -107,6 +111,7 @@ closerLeftNavbar.addEventListener("click", () => {
 
 document.getElementById("openLeftNavbar").addEventListener("click", () => {
   sideNavLeft.style.display = "flex";
+
   setTimeout(() => {
     sideNavLeft.setAttribute("style", "transform:translateX(0px)");
   }, 100);

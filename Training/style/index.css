@@ -5,27 +5,34 @@ body {  /* SM down */
   
   @media screen and (min-width: 400px) { /*SM up or MD down*/
     body {
-     
     }
   }
   
   @media screen and (min-width: 900px) { /*MD up or LG down*/
     body {
-      
+    
     }
   }
 
   @media screen and (min-width: 1200px) { /*LG up */
     body {
-     
     }
   }
+
+ #root 
+ {
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+
+ }
 
   .sideNavLeft {
     background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
     margin:1em 0 0 1em;
     width: 14rem;
-    position: absolute;
+    float: left;
     height:fit-content;
     display:flex;
     flex-direction: column;
@@ -34,6 +41,14 @@ body {  /* SM down */
     overflow: scroll;
     padding: 1em 1.2rem 1.7rem 1.2rem;
     color:rgb(210, 199, 199);
+  }
+
+
+  @media screen and (max-width: 900px) { 
+    .sideNavLeft {
+      position: absolute;
+      display: none;
+    }
   }
 
   .box
@@ -163,10 +178,14 @@ body {  /* SM down */
 
     background-color:rgb(110, 110, 110);
   }
+  .item 
+  {
+    display: relative;
+  }
   .selectedItem{
     position: relative;
     overflow: hidden;
-    background-color:rgb(102, 68, 4);
+    background-color:rgb(4, 73, 102);
   }
   /*--------PARTIES--------*/
   .parties{
