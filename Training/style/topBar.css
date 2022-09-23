@@ -7,10 +7,9 @@
   position: relative;
   top: 1rem;
   float: right;
-
   align-self:start;
   transition: all 0.2s ease-in-out;
-  margin: 0 1rem;
+  margin: auto;
 }
 
 @media screen and (max-width: 400px) {
@@ -32,7 +31,8 @@
 
 #pathPage {
   font-size: 0.8rem;
-  width: 100%;
+  width: 18rem;
+  
   letter-spacing: 0.2rem;
   color: rgb(106, 106, 106);
 }
@@ -78,7 +78,7 @@
 
 .searchBar {
   display: flex;
-  margin-left: 20vw;
+  margin-left: 5vw;
 }
 
 input[type="text"] {

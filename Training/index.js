@@ -8,6 +8,7 @@ const root = document.getElementById("root");
 
 root.innerHTML += sideNavLeftContent;
 root.innerHTML += TopBar;
+root.innerHTML += LandingPage;
 
 const sideNavLeft = document.getElementById("sideNavLeft");
 
@@ -113,6 +114,29 @@ document.getElementById("openLeftNavbar").addEventListener("click", () => {
   sideNavLeft.style.display = "flex";
 
   setTimeout(() => {
-    sideNavLeft.setAttribute("style", "transform:translateX(0px)");
+    sideNavLeft.setAttribute("style", "transform:translateX(0px);z-index:1;");
   }, 100);
+});
+
+/**little SideBar  */
+
+let titles1 = document.querySelectorAll(".title1");
+let titles2 = document.querySelectorAll(".title2");
+let carets = document.querySelectorAll(".caret");
+let avatarName = document.querySelectorAll(".avatarName");
+
+sideNavLeft.addEventListener("dblclick", () => {
+  titles1.forEach((title1) => {
+    title1.style.display = "none";
+  });
+  titles2.forEach((title2) => {
+    title2.style.display = "none";
+  });
+  carets.forEach((caret) => {
+    caret.style.display = "none";
+  });
+  avatarName.forEach((avatarNamee) => {
+    avatarNamee.style.display = "none";
+  });
+  sideNavLeft.style.width = "auto";
 });

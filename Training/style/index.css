@@ -24,7 +24,9 @@ body {  /* SM down */
   width: 100%;
   height: 100%;
  
-  display: flex;
+  display: flex; 
+  
+  flex-direction: column;
 
  }
 
@@ -38,7 +40,10 @@ body {  /* SM down */
     flex-direction: column;
     border-radius: 1em;
     transition: all 0.3s ease-in-out;
-    overflow: scroll;
+    /* overflow: scroll; */
+    position: absolute;
+    /* align-items:center; */
+    z-index: 1;
     padding: 1em 1.2rem 1.7rem 1.2rem;
     color:rgb(210, 199, 199);
   }
@@ -47,9 +52,10 @@ body {  /* SM down */
   @media screen and (max-width: 900px) { 
     .sideNavLeft {
       position: absolute;
-      display: none;
+    
+      
     }
-  }
+  } 
 
   .box
   {
@@ -94,8 +100,7 @@ body {  /* SM down */
    
     height: fit-content;
     align-self: center;
-     
-     margin: 0.4rem 0.3rem 0 auto;
+    margin: 0.4rem 0.3rem 0 auto;
     font-size: 1rem;
     transition: all 0.2s ease-in-out;
     transform: rotate(0deg);
