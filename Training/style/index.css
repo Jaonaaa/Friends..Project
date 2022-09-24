@@ -48,7 +48,6 @@ body {  /* SM down */
     color:rgb(210, 199, 199);
   }
 
-
   @media screen and (max-width: 900px) { 
     .sideNavLeft {
       position: absolute;
@@ -62,6 +61,7 @@ body {  /* SM down */
     display: flex;
     flex-direction: row;
     margin-bottom: 0.2rem;
+  
     justify-content: center;
     padding: 0.9rem 0.4rem;
     border-radius: 0.35rem;
@@ -108,8 +108,8 @@ body {  /* SM down */
   }
 
   hr {
-    width: 100%;
-    margin: 0.478rem 0 0.46rem 0;
+    width: 98%;
+    margin: 0.478rem auto 0.46rem auto;
     border-color: gray;
   }
 
@@ -196,6 +196,7 @@ body {  /* SM down */
   .parties{
     overflow: hidden;
     height: 3.6rem;
+    z-index: 3;
     transition: all 0.3s ease-in-out;
   }
   .closerLeftNavbar

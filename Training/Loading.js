@@ -99,7 +99,7 @@ class Loading extends HTMLElement {
    */
   buildTrail(r, stroke) {
     const w = r * 2 + stroke;
-    let dom = `<svg class="trail" width="${w}" height="${w} viewBox="0 0 ${w}${w}">`;
+    let dom = `<svg class="trail" width="${w}" height="${w}" viewBox="0 0 ${w} ${w}">`;
 
     dom += `<circle cx="${w / 2}" cy="${w / 2}" 
     r="${r}" stroke="currentColor" stroke-width="${stroke}" stroke-linecap="round" fill="none"/>`;
