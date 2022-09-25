@@ -1,3 +1,7 @@
+@font-face {
+  font-family: RalewayThin;
+  src: url(./font/static/Raleway-Thin.ttf);
+}
 #topBar {
   font-family: Foco;
   padding: 0.2rem 0.5rem 0.6rem 0.5rem;
@@ -40,6 +44,7 @@
   padding: 0.5rem;
   font-size: 1.1rem;
   font-weight: 500;
+  font-family: RalewayThin;
 }
 .boxy {
   display: flex;
@@ -60,8 +65,8 @@
 }
 .iconBox div i:hover {
   cursor: pointer;
-  color: rgb(4, 73, 102);
-  text-shadow: 0.01rem 0.01rem 2rem rgb(4, 73, 102);
+  color: rgb(65, 170, 215);
+  text-shadow: 0.01rem 0.01rem 2rem rgb(110, 185, 218);
   transform: translateY(-0.1rem);
 }
 
@@ -86,6 +91,7 @@ input[type="text"] {
   border-width: 1px;
   border-radius: 5%;
   padding: 1em 0.3em;
+  border-style: solid;
   background: none;
 }
 
@@ -109,11 +115,15 @@ input[type="text"] {
 }
 
 .input input:focus ~ label {
-  top: -0.5rem;
+  top: -0.39rem;
   font-size: 0.83rem;
   left: 0.4rem;
   padding: 0 0.2rem;
   color: rgb(105, 197, 240);
+}
+input {
+  font-family: Raleway;
+  color : grey;
 }
 .input input:focus {
   border-color: rgb(105, 197, 240);

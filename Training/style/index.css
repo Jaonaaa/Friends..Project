@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Raleway ;
+  src: url(./font/Raleway-VariableFont_wght.ttf);
+}
 body {  /* SM down */
     margin : 0;
     background-color: rgb(240, 242, 245);
@@ -40,11 +44,11 @@ body {  /* SM down */
     flex-direction: column;
     border-radius: 1em;
     transition: all 0.3s ease-in-out;
-    /* overflow: scroll; */
+     overflow: hidden; 
     position: absolute;
     /* align-items:center; */
     z-index: 1;
-    padding: 1em 1.2rem 1.7rem 1.2rem;
+    padding: 1em 0.8rem 1.7rem 0.8rem;
     color:rgb(210, 199, 199);
   }
 
@@ -73,16 +77,16 @@ body {  /* SM down */
     font-size: 1.5rem;
     text-align: center;
     cursor:auto !important;
-    font-family:"Foco";
+    font-family: Raleway;
    
   }
 
 
   .title2 {
     text-align: center;
-    font-family:"Foco";
+    font-family:Raleway ;
     margin-top: 0.4rem;
-    font-size: 1rem;
+    font-size: 0.89rem;
     margin-left: 0.7rem;
     letter-spacing: 0.1rem;
   }
@@ -110,7 +114,7 @@ body {  /* SM down */
   hr {
     width: 98%;
     margin: 0.478rem auto 0.46rem auto;
-    border-color: gray;
+    border-color: #4d4d4d;;
   }
 
   .icon {
@@ -125,7 +129,7 @@ body {  /* SM down */
     overflow: hidden;
     margin-top: 0.3rem;
     font-size: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Raleway;
     font-weight: bold;
     
   }
@@ -158,14 +162,14 @@ body {  /* SM down */
   }
 
   .avatarName {
-    margin-left: 0.4rem;
+    margin-left: 0.7rem;
     float:left;
     align-self:center;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-overflow: ellipsis;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Raleway ;
   }
   /*--------------------------------*/
   /*---------Section---------------*/
@@ -181,7 +185,7 @@ body {  /* SM down */
   /*------------OPTION------------*/
   .selected{
 
-    background-color:rgb(110, 110, 110);
+    background-image: linear-gradient(146deg,#2d2d2d ,hsl(179deg 54% 38% / 41%), #3f4048);
   }
   .item 
   {
@@ -190,12 +194,13 @@ body {  /* SM down */
   .selectedItem{
     position: relative;
     overflow: hidden;
-    background-color:rgb(4, 73, 102);
+    background-image: linear-gradient(288deg, #395e62, transparent);
   }
   /*--------PARTIES--------*/
   .parties{
     overflow: hidden;
     height: 3.6rem;
+    position: relative;
     z-index: 3;
     transition: all 0.3s ease-in-out;
   }
@@ -242,3 +247,39 @@ body {  /* SM down */
   }
 
   
+  /*Hovering sidenav SM */
+
+  .partiesSM:hover
+  {
+    background-color:rgb(109, 109, 109); 
+  } 
+
+  .menu
+  {
+    position: absolute;
+    background-color:rgb(255, 255, 255) ;
+    min-height: 3rem;
+    width:auto;
+    top: 5%;
+    margin-left: 9%;
+    z-index: 1;
+    height: fit-content;
+    font-family: Raleway;
+    padding: 1rem;
+    font-size: 1.1rem;
+    line-height: 2;
+    transition: all 0.3s ease-in-out;
+    border-radius:0.2rem 0.2rem 0.2rem 0.2rem;
+  }
+  .menu .cone 
+  {
+    position: absolute;
+    background-color: rgb(255 255 255);
+    top: 4.55px;
+    left: 12;
+    width: 1rem;
+    z-index: -1;
+    height: 0.6rem;
+    margin-left: -18%;
+    transform: rotate(56deg);
+  }

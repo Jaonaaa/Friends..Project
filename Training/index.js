@@ -140,6 +140,7 @@ const parties2 = document.querySelectorAll(".parties");
 sideNavLeft.addEventListener("dblclick", () => {
   if (smallSidenav === false) {
     smallSidenavbar();
+    hovering();
   } else {
     fullSideNav();
   }
@@ -149,8 +150,7 @@ function smallSidenavbar() {
   smallSidenav = true;
 
   parties2.forEach((partie2) => {
-    console.log(partie2);
-    console.log(heightInitial);
+    partie2.classList.add("partiesSM");
     partie2.style.height = heightInitial + "px";
     partie2.firstElementChild.classList.remove("selected");
   });
@@ -178,6 +178,9 @@ function smallSidenavbar() {
 }
 
 function fullSideNav() {
+  parties2.forEach((partie2) => {
+    partie2.classList.remove("partiesSM");
+  });
   smallSidenav = false;
   titles1.forEach((title1) => {
     title1.style.display = "flex";
@@ -200,4 +203,36 @@ function fullSideNav() {
   sideNavLeft.style.width = "14rem";
   sideNavLeft.style.padding = "1em 1.2rem 1.7rem 1.2rem";
   closerLeftNavbar.style.display = "flex";
+}
+
+/* ------------------  Side nav SM  ------------------- */
+
+function hovering() {
+  const hovering = document.createElement("div");
+  root.appendChild(hovering);
+  parties2.forEach((partie2) => {
+    partie2.addEventListener("click", (e) => {
+      var inside = `<div class="menu" >  
+    <div class="cone"></div>
+    <div class="title2">${partie2.children[0].textContent}</div>
+    `;
+      for (var i = 1; i < partie2.children.length; i++) {
+        var text = partie2.children[i].textContent;
+
+        for (var e = 0; e < partie2.children[i].textContent.length; e++) {
+          text = text.replace(" ", "");
+        }
+
+        inside +=
+          `<div class="row">` + text.replace(`${text[3]}`, "") + `</div>`;
+      }
+      inside += ` </div> `;
+      hovering.innerHTML = inside;
+      if (
+        partie2.classList.contains("partiesSM") &&
+        sideNavLeft.style.width === "3.5rem"
+      ) {
+      }
+    });
+  });
 }

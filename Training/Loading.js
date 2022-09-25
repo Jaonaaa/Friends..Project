@@ -8,6 +8,7 @@ class Loading extends HTMLElement {
     const root = this.attachShadow({ mode: "open" });
     root.innerHTML += `<div>
     ${this.buildStyle(width, circleRadius * 2, circle)}
+   
     ${this.buildTrail(width / 2 - circleRadius, circleRadius * 2)}
     ${this.buildCircle(width, circle, circleRadius)}
     </div>`;
@@ -41,6 +42,7 @@ class Loading extends HTMLElement {
    */
   buildStyle(w, stroke, n) {
     const perimeter = Math.PI * (w - stroke);
+
     return `
     <style>
         :host{
@@ -71,6 +73,8 @@ class Loading extends HTMLElement {
         .trail circle{
           animation : trail 2s cubic-bezier(.5,.15,.5,.85) infinite;
         } 
+        
+        
 
         @keyframes trail{
           O%{

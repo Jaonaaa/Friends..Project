@@ -50,8 +50,9 @@ inputs.forEach((input) => {
     if (input.firstElementChild.value != "") {
       input.children[1].setAttribute(
         "style",
-        `top:-0.5rem;font-size:0.83rem;left:0.4rem;padding:0 0.2rem; `
+        `top:-0.39rem;font-size:0.83rem;left:0.4rem;padding:0 0.2rem; `
       );
+      input.style.borderColor = "rgb(105, 197, 240);";
     } else {
       input.children[1].setAttribute(
         "style",
